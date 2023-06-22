@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MediadorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Route::get('/', function (MediadorController $mediador) {
+//     $mediadores = $mediador->get();
+//     return view('Mediador.index', compact('mediadores'));
+// });
+
+Route::get("/Mediador", function () {
+    return view('Mediador.index');
 });
+ 
